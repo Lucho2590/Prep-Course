@@ -162,21 +162,29 @@ function esPrimo(numero) {
 function esVerdadero(valor) {
     //Escribe una función que reciba un valor booleano y retorne “Soy verdadero” 
     //si su valor es true y “Soy falso” si su valor es false.
-    //Escribe tu código aquí
-
+    //Escribe tu código aquí:
+    if (valor === true) {
+        return ('Soy verdadero')
+    } else if (valor === false) {
+        return ('Soy falso')
+    }
 }
 
 function tablaDelSeis() {
     //Escribe una función que muestre la tabla de multiplicar del 6 (del 0 al 60).
     //La función devuelve un array con los resultados de la tabla de multiplicar del 6 en orden creciente.
     //Escribe tu código aquí   
-
+    return ([0, 6, 12, 18, 24, 30, 36, 42, 48, 54, 60])
 }
 
 function tieneTresDigitos(numero) {
     //Leer un número entero y retornar true si tiene 3 dígitos. Caso contrario, retorna false.
     //Escribe tu código aquí
-
+    if ((numero.length) !== 3) {
+        return (false)
+    } else {
+        return (true)
+    }
 }
 
 function doWhile(numero) {
