@@ -132,11 +132,11 @@ function fizzBuzz(numero) {
     // De lo contrario, devuelve el numero
     // Tu código:
     if (((numero % 3) || (numero % 5)) === 0) {
-        return ('FizzBuzz')
+        return ('fizzbuzz')
     } else if ((numero % 3) == 0) {
-        return ('Fizz')
+        return ('fizz')
     } else if ((numero % 5) == 0) {
-        return ('Buzz')
+        return ('buzz')
     } else {
         return (numero)
     }
@@ -154,7 +154,7 @@ function operadoresLogicos(num1, num2, num3) {
     } else if ((num1 < 0) || (num2 < 0) || (num3 < 0)) {
         return ('Hay negativos')
     } else if ((num1 > num2) && (num1 > num3)) {
-        return ('Numero 1 es mayor y positivo')
+        return ('Número 1 es mayor y positivo')
     } else if ((num3 > num1) && (num3 > num2)) {
         return (num3 + 1)
     } else {
@@ -169,10 +169,10 @@ function esPrimo(numero) {
     // Pista: un número primo solo es divisible por sí mismo y por 1
     // Pista 2: Puedes resolverlo usando un bucle `for`
     // Nota: Los números 0 y 1 NO son considerados números primos
-    if ((numero == 0) || (numero == 1)) {
-        return (false)
-    } else {
+    if ((numero !== 0) && (numero !== 1)) {
         return (true)
+    } else {
+        return (false)
     }
 }
 
@@ -197,10 +197,11 @@ function tablaDelSeis() {
 function tieneTresDigitos(numero) {
     //Leer un número entero y retornar true si tiene 3 dígitos. Caso contrario, retorna false.
     //Escribe tu código aquí
-    if ((numero.length) !== 3) {
-        return (false)
-    } else {
+    let digitos = numero.toString();
+    if ((digitos.length) === 3) {
         return (true)
+    } else {
+        return (false)
     }
 }
 

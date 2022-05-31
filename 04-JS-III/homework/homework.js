@@ -38,7 +38,8 @@ function agregarItemAlFinalDelArray(array, elemento) {
     // Añade el "elemento" al final del array
     // y devuelve el array
     // Tu código:
-    return (array.push(elemento));
+    array.push(elemento)
+    return (array);
 }
 
 
@@ -47,7 +48,8 @@ function agregarItemAlComienzoDelArray(array, elemento) {
     // y devuelve el array
     // Pista: usa el método `.unshift`
     // Tu código:
-    return (array.unshift(elemento));
+    array.unshift(elemento)
+    return (array);
 }
 
 
@@ -137,7 +139,7 @@ function diaDeLaSemana(numeroDeDia) {
     if ((numeroDeDia == 1) || (numeroDeDia == 7)) {
         return ("Es fin de semana")
     } else {
-        return ("Es dia laboral")
+        return ("Es dia Laboral")
     }
 }
 
@@ -160,16 +162,18 @@ function todosIguales(arreglo) {
     //Escriba la función todosIguales, que indique si todos los elementos de un arreglo son iguales:
     //retornar true, caso contrario retornar false.
     //Escribe tu código aquí:
-
+    let numero = arreglo;
     for (let i = 0; i < arreglo.length; i++) {
-        let iguales = arreglo[i];
-        if (iguales !== arreglo[i]) {
-            return (false)
-        } else {
-            return (true)
+        for (let j = 0; j < numero.length; j++) {
+            if (arreglo[i] !== numero[j]) {
+                return (false)
+            }
         }
     }
+    return (true)
 }
+
+
 
 
 function mesesDelAño(array) {
@@ -177,21 +181,22 @@ function mesesDelAño(array) {
     // "Enero", "Marzo" y "Noviembre", guardarlo en nuevo array y retornarlo.
     //Si alguno de los meses no está, devolver: "No se encontraron los meses pedidos"
     // Tu código:
-    let meses = ['Enero', 'Marzo', 'Noviembre']
-    let mesesABuscar = []
+    let arregloDeMeses = [];
     for (let i = 0; i < array.length; i++) {
-        if (array.indexOf('Enero')) {
-            array.pop()
-            mesesABuscar.push('Enero')
-        } else if (array.indexOf('Marzo')) {
-            array.pop()
-            mesesABuscar.push('Marzo')
-        } else if (array.indexOf('Noviembre')) {
-            array.pop()
-            mesesABuscar.push('Noviembre')
+        if (array.indexOf("Enero") != -1) {
+            array.splice((array.indexOf("Enero")), 1)
+            arregloDeMeses.push("Enero")
+        } else if (array.indexOf("Marzo") != -1) {
+            array.splice((array.indexOf("Marzo")), 1)
+            arregloDeMeses.push("Marzo")
+        } else if (array.indexOf("Noviembre") != -1) {
+            array.splice((array.indexOf("Noviembre")), 1)
+            arregloDeMeses.push("Noviembre")
+        } else {
+            return ("No se ensontraron los mese pedidos")
         }
     }
-    return (mesesABuscar)
+    return (arregloDeMeses)
 }
 
 
